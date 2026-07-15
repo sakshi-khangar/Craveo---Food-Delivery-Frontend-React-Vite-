@@ -1,18 +1,119 @@
-# React + Vite
+# 🍔 Craveo - Food Delivery Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Craveo is a modern food delivery web application frontend built using **React** and **Vite**. It provides a clean, responsive, and user-friendly interface for customers and administrators. The frontend communicates with a Spring Boot backend using REST APIs.
 
-Currently, two official plugins are available:
+> **Note:** This repository contains only the frontend. The backend will be uploaded separately.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### 👤 Authentication
 
-Note: This will impact Vite dev & build performances.
+* Login & Register
+* JWT Authentication
+* Protected Routes
+* User Profile
 
-## Expanding the Oxlint configuration
+### 🏠 User Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+* Dynamic Home Page
+* Restaurant Listing
+* Restaurant Details
+* Food Menu
+* Search
+* Shopping Cart
+* Checkout
+* Address Management
+* My Orders
+* Favourite Foods
+* Responsive Design
+
+### 👨‍💼 Admin Panel
+
+* Dashboard
+* Category Management
+* Restaurant Management
+* Food Management
+* Banner/Offer Management
+* Order Management
+
+---
+
+## 🛠 Tech Stack
+
+* React
+* Vite
+* React Router DOM
+* Axios
+* Context API
+* CSS3
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── admin/
+├── api/
+├── assets/
+├── components/
+├── context/
+├── pages/
+├── routes/
+├── utils/
+└── App.jsx
+```
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/your-username/craveo-frontend.git
+
+cd craveo-frontend
+
+npm install
+
+npm run dev
+```
+
+The application will start on:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 🔗 Backend
+
+The Spring Boot backend repository will be added soon.
+
+---
+## 🚧 Current Progress
+
+### 🔮 Upcoming Features
+
+* Weather Widget
+* Notifications
+* Coupons
+* Reviews & Ratings
+* Live Order Tracking
+* AI Food Recommendation Assistant
+
+---
+
+## 👩‍💻 Developer
+
+**Sakshi**
+
+Frontend Developer | Java Full Stack Developer
+
+---
+
+## ⭐ Support
+
+If you like this project, don't forget to give it a ⭐ on GitHub.
