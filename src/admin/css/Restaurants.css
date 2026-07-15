@@ -1,0 +1,755 @@
+
+
+/* ===== Restaurant Management — Premium Admin UI ===== */
+
+/* .restaurant-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 16px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.restaurant-container h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #241c33;
+  margin: 0 0 6px;
+  position: relative;
+  display: inline-block;
+}
+
+.restaurant-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 2px;
+  width: 46px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #ff5da2, #b23fe4);
+} */
+
+/* ===== Form Panel ===== */
+
+/* .restaurant-container form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  background: linear-gradient(135deg, #ffffff, #faf7ff);
+  border: 1px solid #f0eaf9;
+  padding: 24px;
+  border-radius: 20px;
+  margin: 28px 0 34px;
+  box-shadow: 0 10px 30px rgba(120, 60, 180, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.restaurant-container form::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(178, 63, 228, 0.08), transparent 70%);
+  border-radius: 50%;
+}
+
+.restaurant-container form input,
+.restaurant-container form select {
+  padding: 13px 16px;
+  border: 1.5px solid #eee6f7;
+  border-radius: 14px;
+  font-size: 13.5px;
+  outline: none;
+  background: #fff;
+  color: #241c33;
+  transition: all 0.25s ease;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.restaurant-container form input::placeholder {
+  color: #b3aabf;
+}
+
+.restaurant-container form input:focus,
+.restaurant-container form select:focus {
+  border-color: #b23fe4;
+  box-shadow: 0 0 0 5px rgba(178, 63, 228, 0.12);
+  transform: translateY(-1px);
+}
+
+.restaurant-container form select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239a94a8' stroke-width='3'><path d='M6 9l6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.restaurant-container form button {
+  grid-column: span 3;
+  border: none;
+  background: linear-gradient(135deg, #ff5da2, #b23fe4);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 14px 30px;
+  border-radius: 14px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 8px 20px rgba(178, 63, 228, 0.3);
+}
+
+.restaurant-container form button:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 12px 26px rgba(178, 63, 228, 0.4);
+}
+
+.restaurant-container form button:active {
+  transform: scale(0.97);
+} */
+
+/* ===== Card Grid instead of table ===== */
+
+/* .restaurant-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.restaurant-container thead {
+  display: none;
+}
+
+.restaurant-container tbody {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.restaurant-container tbody tr {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #f2edf7;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 14px rgba(30, 20, 50, 0.05);
+  transition: all 0.3s ease;
+  animation: cardIn 0.4s ease;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.restaurant-container tbody tr:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(178, 63, 228, 0.18);
+  border-color: #f0dcfb;
+} */
+
+/* ---- ID badge ---- */
+/* .restaurant-container td:first-child {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(20, 14, 30, 0.5);
+  backdrop-filter: blur(4px);
+  padding: 3px 9px;
+  border-radius: 999px;
+  z-index: 2;
+} */
+
+/* ---- Image banner (works for emoji text AND real <img> tags later) ---- */
+/* .restaurant-container td:nth-child(2) {
+  height: 140px;
+  width: 100%;
+  background: linear-gradient(135deg, #f3d9ea, #ece2fb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+  position: relative;
+  overflow: hidden;
+}
+
+.restaurant-container td:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* ---- Rating badge overlay on image ---- */
+/* .restaurant-container td:nth-child(5) {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(20, 14, 30, 0.6);
+  backdrop-filter: blur(4px);
+  color: #ffce54;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  z-index: 2;
+}
+
+.restaurant-container td:nth-child(5)::before {
+  content: "⭐ ";
+} */
+
+/* ---- Info section ---- */
+/* .restaurant-container td:nth-child(3) {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #241c33;
+  padding: 14px 16px 2px;
+}
+
+.restaurant-container td:nth-child(4) {
+  font-size: 11.5px;
+  color: #9a94a8;
+  padding: 0 16px 10px;
+}
+
+.restaurant-container td:nth-child(6),
+.restaurant-container td:nth-child(7) {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #4a4356;
+  padding: 0 16px;
+}
+
+.restaurant-container td:nth-child(6)::before {
+  content: "⏱ ";
+}
+
+.restaurant-container td:nth-child(7)::before {
+  content: "💰 ";
+}
+
+.restaurant-container td:nth-child(6),
+.restaurant-container td:nth-child(7) {
+  float: left;
+  margin-bottom: 10px;
+}
+
+.restaurant-container td:nth-child(7) {
+  clear: none;
+}
+
+.restaurant-container td:nth-child(8) {
+  font-size: 11px;
+  color: #9a94a8;
+  padding: 4px 16px 8px;
+  clear: both;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.restaurant-container td:nth-child(8)::before {
+  content: "📍";
+  flex-shrink: 0;
+}
+
+.restaurant-container td:nth-child(9) {
+  display: inline-block;
+  margin: 6px 16px 14px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #b23fe4;
+  background: #f7edff;
+  padding: 4px 12px;
+  border-radius: 999px;
+  width: fit-content;
+} */
+
+/* ---- Action buttons ---- */
+/* .restaurant-container td:last-child {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px 18px;
+  margin-top: auto;
+}
+
+.restaurant-container td button {
+  flex: 1;
+  border: none;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 9px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.restaurant-container td button:first-child {
+  background: #f5edff;
+  color: #8b5cf6;
+}
+
+.restaurant-container td button:first-child:hover {
+  background: #8b5cf6;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.restaurant-container td button.delete {
+  background: #fde9e9;
+  color: #e0374f;
+}
+
+.restaurant-container td button.delete:hover {
+  background: #e0374f;
+  color: #fff;
+  transform: translateY(-1px);
+} */
+
+/* ===== Empty state ===== */
+
+/* .restaurant-container tbody:empty {
+  display: block;
+}
+
+.restaurant-container tbody:empty::after {
+  content: "🍴  No restaurants yet — add your first one above";
+  display: block;
+  text-align: center;
+  padding: 50px 20px;
+  color: #b0a6c4;
+  font-size: 13.5px;
+  font-weight: 600;
+  background: #faf8fc;
+  border-radius: 18px;
+  border: 1px dashed #e6dcf2;
+} */
+
+/* ===== Responsive ===== */
+
+/* @media (max-width: 900px) {
+  .restaurant-container form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .restaurant-container form button {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .restaurant-container form {
+    grid-template-columns: 1fr;
+  }
+  .restaurant-container form button {
+    grid-column: span 1;
+  }
+  .restaurant-container tbody {
+    grid-template-columns: 1fr;
+  }
+} */
+
+/* ===== Restaurant Management — Admin UI ===== */
+
+.restaurant-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 16px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.restaurant-container h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #241c33;
+  margin: 0 0 6px;
+  position: relative;
+  display: inline-block;
+}
+
+.restaurant-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 2px;
+  width: 46px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #ff5da2, #b23fe4);
+}
+
+/* ===== Form Panel ===== */
+
+.restaurant-container form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  background: linear-gradient(135deg, #ffffff, #faf7ff);
+  border: 1px solid #f0eaf9;
+  padding: 24px;
+  border-radius: 20px;
+  margin: 28px 0 34px;
+  box-shadow: 0 10px 30px rgba(120, 60, 180, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.restaurant-container form::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(178, 63, 228, 0.08), transparent 70%);
+  border-radius: 50%;
+}
+
+.restaurant-container form input,
+.restaurant-container form select {
+  padding: 13px 16px;
+  border: 1.5px solid #eee6f7;
+  border-radius: 14px;
+  font-size: 13.5px;
+  outline: none;
+  background: #fff;
+  color: #241c33;
+  transition: all 0.25s ease;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.restaurant-container form input::placeholder {
+  color: #b3aabf;
+}
+
+.restaurant-container form input:focus,
+.restaurant-container form select:focus {
+  border-color: #b23fe4;
+  box-shadow: 0 0 0 5px rgba(178, 63, 228, 0.12);
+  transform: translateY(-1px);
+}
+
+.restaurant-container form select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239a94a8' stroke-width='3'><path d='M6 9l6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.restaurant-container form button {
+  grid-column: span 3;
+  border: none;
+  background: linear-gradient(135deg, #ff5da2, #b23fe4);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 14px 30px;
+  border-radius: 14px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 8px 20px rgba(178, 63, 228, 0.3);
+}
+
+.restaurant-container form button:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 12px 26px rgba(178, 63, 228, 0.4);
+}
+
+.restaurant-container form button:active {
+  transform: scale(0.97);
+}
+
+/* ===== Card Grid ===== */
+
+.restaurant-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.restaurant-container thead {
+  display: none;
+}
+
+.restaurant-container tbody {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.restaurant-container tbody tr {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #f2edf7;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(30, 20, 50, 0.05);
+  transition: all 0.3s ease;
+  animation: cardIn 0.4s ease;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.restaurant-container tbody tr:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(178, 63, 228, 0.18);
+  border-color: #f0dcfb;
+}
+
+/* All cells reset to block, we style by nth-child using flex layout on parent */
+.restaurant-container td {
+  padding: 0;
+}
+
+/* ---- Image cell (image + id badge + rating badge) ---- */
+.restaurant-container td:nth-child(2) {
+  position: relative;
+  height: 190px;
+  width: 100%;
+  background: linear-gradient(135deg, #f3d9ea, #ece2fb);
+  overflow: hidden;
+}
+
+.restaurant-container td:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ID badge sits on top of image (first cell) */
+.restaurant-container td:first-child {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(20, 14, 30, 0.55);
+  backdrop-filter: blur(4px);
+  padding: 4px 10px;
+  border-radius: 999px;
+  z-index: 2;
+}
+
+/* Rating badge sits on top of image too */
+.restaurant-container td:nth-child(5) {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(20, 14, 30, 0.6);
+  backdrop-filter: blur(4px);
+  color: #ffce54;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 11px;
+  border-radius: 999px;
+  z-index: 2;
+}
+
+.restaurant-container td:nth-child(5)::before {
+  content: "⭐ ";
+}
+
+/* ---- Info body wrapper ---- */
+.restaurant-container td:nth-child(3),
+.restaurant-container td:nth-child(4),
+.restaurant-container td:nth-child(6),
+.restaurant-container td:nth-child(7),
+.restaurant-container td:nth-child(8),
+.restaurant-container td:nth-child(9) {
+  padding: 0 18px;
+}
+
+/* Name */
+.restaurant-container td:nth-child(3) {
+  font-size: 17px;
+  font-weight: 800;
+  color: #241c33;
+  padding-top: 16px;
+  padding-bottom: 2px;
+}
+
+/* Cuisine */
+.restaurant-container td:nth-child(4) {
+  font-size: 12.5px;
+  color: #9a94a8;
+  padding-bottom: 12px;
+}
+
+/* Meta row: delivery time + price, side by side */
+.restaurant-container td:nth-child(6),
+.restaurant-container td:nth-child(7) {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a4356;
+  background: #f8f5fc;
+  padding: 6px 12px;
+  border-radius: 999px;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.restaurant-container td:nth-child(6) {
+  margin-right: 8px;
+}
+
+.restaurant-container td:nth-child(6)::before {
+  content: "⏱";
+}
+
+.restaurant-container td:nth-child(7)::before {
+  content: "💰";
+}
+
+/* Make time + price sit on same row */
+.restaurant-container td:nth-child(6) {
+  float: left;
+}
+.restaurant-container td:nth-child(7) {
+  float: left;
+  clear: none;
+}
+
+/* Address */
+.restaurant-container td:nth-child(8) {
+  clear: both;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 12px;
+  color: #9a94a8;
+  line-height: 1.4;
+  padding-bottom: 10px;
+}
+
+.restaurant-container td:nth-child(8)::before {
+  content: "📍";
+  flex-shrink: 0;
+}
+
+/* Category tag */
+.restaurant-container td:nth-child(9) {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #b23fe4;
+  background: #f7edff;
+  padding: 5px 14px;
+  border-radius: 999px;
+  width: fit-content;
+  margin: 0 18px 16px;
+}
+
+/* ---- Action buttons ---- */
+.restaurant-container td:last-child {
+  display: flex;
+  gap: 10px;
+  padding: 14px 18px 20px;
+  margin-top: auto;
+  border-top: 1px solid #f5f0fa;
+}
+
+.restaurant-container td button {
+  flex: 1;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.restaurant-container td button:first-child {
+  background: #f5edff;
+  color: #8b5cf6;
+}
+
+.restaurant-container td button:first-child:hover {
+  background: #8b5cf6;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.restaurant-container td button.delete {
+  background: #fde9e9;
+  color: #e0374f;
+}
+
+.restaurant-container td button.delete:hover {
+  background: #e0374f;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ===== Empty state ===== */
+
+.restaurant-container tbody:empty {
+  display: block;
+}
+
+.restaurant-container tbody:empty::after {
+  content: "🍴  No restaurants yet — add your first one above";
+  display: block;
+  text-align: center;
+  padding: 50px 20px;
+  color: #b0a6c4;
+  font-size: 13.5px;
+  font-weight: 600;
+  background: #faf8fc;
+  border-radius: 18px;
+  border: 1px dashed #e6dcf2;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+  .restaurant-container form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .restaurant-container form button {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .restaurant-container form {
+    grid-template-columns: 1fr;
+  }
+  .restaurant-container form button {
+    grid-column: span 1;
+  }
+  .restaurant-container tbody {
+    grid-template-columns: 1fr;
+  }
+}

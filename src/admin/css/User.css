@@ -1,0 +1,431 @@
+/* ================= USERS PAGE ================= */
+
+.users-page{
+    width:100%;
+    padding:30px;
+    animation:fadeIn .3s ease;
+}
+
+.users-loading,
+.users-empty{
+    text-align:center;
+    font-size:18px;
+    color:#777;
+    margin-top:50px;
+}
+
+/* ================= GRID ================= */
+
+.users-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+    gap:24px;
+    margin-top:25px;
+}
+
+/* ================= CARD ================= */
+
+.user-card{
+    background:#fff;
+    border-radius:20px;
+    padding:24px;
+    display:flex;
+    gap:18px;
+    align-items:center;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+    transition:.3s;
+    border:1px solid #f2f2f2;
+}
+
+.user-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 40px rgba(0,0,0,.12);
+}
+
+/* ================= AVATAR ================= */
+
+.user-avatar{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ff6b6b,#ff9f43);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    font-weight:700;
+    flex-shrink:0;
+    text-transform:uppercase;
+}
+
+/* ================= INFO ================= */
+
+.user-info{
+    flex:1;
+}
+
+.user-info h3{
+    margin:0;
+    color:#222;
+    font-size:20px;
+    font-weight:700;
+}
+
+.user-email{
+    margin:10px 0 5px;
+    color:#666;
+    font-size:14px;
+    word-break:break-word;
+}
+
+.user-phone{
+    color:#999;
+    font-size:14px;
+    margin-bottom:14px;
+}
+
+/* ================= ROLE ================= */
+
+.user-role-badge{
+    display:inline-block;
+    padding:7px 16px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+.user-role-badge.admin{
+    background:#ffe8d9;
+    color:#ff6b00;
+}
+
+.user-role-badge.user{
+    background:#e8f7ec;
+    color:#1f9d55;
+}
+
+/* ================= HEADER ================= */
+
+.admin-header{
+    margin-bottom:20px;
+}
+
+.admin-header h2{
+    font-size:32px;
+    color:#222;
+    margin-bottom:8px;
+}
+
+.admin-header p{
+    color:#777;
+    font-size:15px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.users-page{
+    padding:18px;
+}
+
+.users-grid{
+    grid-template-columns:1fr;
+}
+
+.user-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+.user-avatar{
+    width:75px;
+    height:75px;
+}
+
+}
+
+
+
+
+
+
+/* ================= HEADER ================= */
+
+.admin-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+    background:linear-gradient(135deg,#ffffff,#fff7f0);
+    padding:25px 30px;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+
+.admin-header h2{
+    font-size:34px;
+    color:#222;
+    margin:0 0 8px;
+    font-weight:800;
+}
+
+.admin-header p{
+    color:#777;
+    font-size:15px;
+    margin:0;
+}
+
+
+/* ================= TOTAL USERS CARD ================= */
+
+
+.users-count-card{
+
+    width:180px;
+    height:120px;
+
+    background:linear-gradient(
+        135deg,
+        #ff6b35,
+        #ff9f43
+    );
+
+    border-radius:25px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+
+    box-shadow:
+    0 15px 35px rgba(255,107,53,.35);
+
+    position:relative;
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+
+.users-count-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:50%;
+
+    top:-50px;
+    right:-40px;
+
+}
+
+
+
+.users-count-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 45px rgba(255,107,53,.45);
+
+}
+
+
+
+.users-count-card h3{
+
+    margin:0;
+
+    font-size:45px;
+
+    font-weight:900;
+
+    z-index:1;
+
+}
+
+
+
+.users-count-card span{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    z-index:1;
+
+}
+
+
+
+/* ================= USER CARD IMPROVE ================= */
+
+
+.user-card{
+
+    background:
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #fffaf5
+    );
+
+    border-radius:24px;
+
+    padding:26px;
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.08);
+
+    border:none;
+
+    transition:.35s;
+
+}
+
+
+
+.user-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.14);
+
+}
+
+
+
+/* ================= AVATAR ================= */
+
+
+.user-avatar{
+
+    width:80px;
+    height:80px;
+
+    border-radius:22px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff512f,
+        #dd2476
+    );
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:32px;
+
+    font-weight:800;
+
+    box-shadow:
+    0 10px 25px rgba(221,36,118,.35);
+
+}
+
+
+
+/* ================= ROLE BADGE ================= */
+
+
+.user-role-badge{
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    font-size:12px;
+
+    font-weight:800;
+
+}
+
+
+
+.user-role-badge.admin{
+
+    background:#fff0e6;
+
+    color:#ff6b00;
+
+}
+
+
+
+.user-role-badge.user{
+
+    background:#e8fff1;
+
+    color:#13a150;
+
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+
+@media(max-width:768px){
+
+.admin-header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    text-align:center;
+
+}
+
+
+.users-count-card{
+
+    width:100%;
+
+}
+
+
+}

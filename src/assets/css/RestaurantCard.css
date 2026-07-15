@@ -1,0 +1,157 @@
+/* .rc-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(30, 20, 50, 0.06);
+  transition: transform 0.15s ease;
+}
+
+.rc-card:hover {
+  transform: translateY(-3px);
+}
+
+.rc-thumb {
+  position: relative;
+  height: 120px;
+}
+
+.rc-rating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(20, 20, 20, 0.55);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+}
+
+.rc-fav {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 13px;
+  z-index: 2;
+}
+
+.rc-info {
+  display: block;
+  padding: 12px 14px 16px;
+}
+
+.rc-info h3 {
+  font-size: 14px;
+  margin: 0 0 4px;
+  color: #241c33;
+}
+
+.rc-cuisine {
+  font-size: 11px;
+  color: #9a94a8;
+  margin: 0 0 6px;
+}
+
+.rc-meta {
+  font-size: 11px;
+  color: #4a4356;
+  margin: 0;
+  font-weight: 500;
+}
+.rc-thumb {
+  position: relative;
+  height: 170px;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.rc-thumb-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.75);
+  transform: scale(1.2);
+}
+
+.rc-thumb-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.rc-thumb-fallback {
+  position: absolute;
+  inset: 0;
+} */
+
+/* ===== Restaurant Card (user-facing, realistic size) ===== */
+
+.rc-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(30, 20, 50, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(30, 20, 50, 0.12);
+}
+
+.rc-thumb {
+  position: relative;
+  height: 140px;
+  background-color: #f3d9ea;
+}
+
+.rc-rating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(20, 20, 20, 0.55);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+}
+
+.rc-info {
+  display: block;
+  padding: 12px 14px 16px;
+  text-decoration: none;
+}
+
+.rc-info h3 {
+  font-size: 14.5px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #241c33;
+}
+
+.rc-cuisine {
+  font-size: 11.5px;
+  color: #9a94a8;
+  margin: 0 0 6px;
+}
+
+.rc-meta {
+  font-size: 11.5px;
+  color: #4a4356;
+  margin: 0;
+  font-weight: 500;
+}

@@ -1,0 +1,181 @@
+.navbar {
+  width: 240px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #f0eef5;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 18px;
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding: 0 6px;
+}
+
+.navbar-logo {
+  font-size: 28px;
+  background: linear-gradient(135deg, #ff5da2, #7b3fe4);
+  -webkit-background-clip: text;
+}
+
+.navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff5da2, #7b3fe4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-subtitle {
+  font-size: 10px;
+  color: #9a94a8;
+  letter-spacing: 0.02em;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #5b5568;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease, color 0.15s ease;
+  position: relative;
+}
+
+.navbar-link:hover {
+  background: #f7f4fb;
+}
+
+.navbar-link.active {
+  background: linear-gradient(135deg, #ff5da2, #b23fe4);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(178, 63, 228, 0.28);
+}
+
+.navbar-link-icon {
+  font-size: 16px;
+}
+
+.navbar-link-label {
+  font-weight: 500;
+}
+
+.navbar-badge {
+  margin-left: auto;
+  font-size: 9px;
+  font-weight: 700;
+  background: #ffe1ec;
+  color: #ff2d78;
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+
+.navbar-link.active .navbar-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.navbar-promo {
+  background: radial-gradient(circle at 30% 20%, #2a1a3d, #170f24);
+  border-radius: 16px;
+  padding: 16px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.navbar-promo-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+
+.navbar-promo-text {
+  font-size: 11px;
+  color: #cfc7dd;
+  margin: 0 0 30px;
+}
+
+.navbar-promo-illustration {
+  position: absolute;
+  right: 12px;
+  bottom: 42px;
+  font-size: 34px;
+  transform: rotate(-8deg);
+}
+
+.navbar-promo-btn {
+  width: 100%;
+  border: none;
+  background: linear-gradient(135deg, #ff5da2, #b23fe4);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 9px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.navbar-darkmode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 6px 4px;
+  font-size: 13px;
+  color: #5b5568;
+}
+
+.toggle {
+  width: 38px;
+  height: 20px;
+  border-radius: 999px;
+  background: #e6e1ee;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.toggle-knob {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.toggle.on {
+  background: linear-gradient(135deg, #ff5da2, #b23fe4);
+}
+
+.toggle.on .toggle-knob {
+  transform: translateX(18px);
+}

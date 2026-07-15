@@ -1,0 +1,182 @@
+/* .orders-container{
+
+padding:30px;
+
+}
+
+
+.orders-container h2{
+
+margin-bottom:20px;
+
+}
+
+
+table{
+
+width:100%;
+border-collapse:collapse;
+background:white;
+
+}
+
+
+th{
+
+background:#222;
+color:white;
+padding:12px;
+
+}
+
+
+td{
+
+padding:12px;
+border-bottom:1px solid #ddd;
+
+}
+
+
+
+select{
+
+padding:6px;
+
+}
+
+
+.delete-btn{
+
+background:red;
+color:white;
+border:none;
+padding:7px 12px;
+border-radius:5px;
+cursor:pointer;
+
+} */
+
+/* ================= ORDER MANAGEMENT ================= */
+
+.order-container {
+    padding: 35px;
+    background: #f7f5fb;
+    min-height: 100vh;
+}
+
+.order-container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #20152f;
+    margin-bottom: 35px;
+}
+
+
+/* Table Card */
+
+.order-table-wrapper {
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+
+/* Table */
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+/* Header */
+
+.order-table thead {
+    background: #211b2d;
+    color: white;
+}
+
+.order-table th {
+    padding: 18px;
+    text-align: left;
+    font-size: 15px;
+    letter-spacing: .5px;
+}
+
+
+/* Rows */
+
+.order-table td {
+    padding: 18px;
+    border-bottom: 1px solid #eee;
+    color: #40364d;
+    font-size: 15px;
+}
+
+
+.order-table tbody tr {
+    transition: 0.3s;
+}
+
+
+.order-table tbody tr:hover {
+    background: #faf0ff;
+}
+
+
+/* Amount */
+
+.order-table td:nth-child(5) {
+    font-weight: 700;
+    color: #9c27d8;
+}
+
+
+/* Status Dropdown */
+
+.order-table select {
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.order-table select:focus {
+    outline: none;
+    border-color: #d83fd3;
+}
+
+
+/* Delete Button */
+
+.delete-btn {
+    background: linear-gradient(135deg,#ff416c,#ff4b2b);
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+
+.delete-btn:hover {
+    transform: translateY(-2px);
+    box-shadow:0 8px 18px rgba(255,65,108,.35);
+}
+
+
+/* Empty */
+
+.no-order {
+    text-align:center;
+    padding:30px;
+    color:#777;
+}
