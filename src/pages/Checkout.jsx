@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import { useCart } from "../context/CartContext.jsx";
 import { getAddresses } from "../api/auth";
 import { checkoutOrder } from "../api/order";
+import { createRazorpayOrder, verifyPayment } from "../api/payment";
 import "../assets/css/Cart.css";
 
 export default function Checkout() {
@@ -11,6 +12,7 @@ export default function Checkout() {
   const [addresses, setAddresses] = useState([]);
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [placing, setPlacing] = useState(false);
+  
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
 
@@ -32,24 +34,70 @@ export default function Checkout() {
       .catch((err) => console.log(err));
   }, []);
 
-  const handlePlaceOrder = async () => {
-    if (!selectedAddress) {
-      alert("Pehle delivery address select karo ya add karo (Profile page se)");
-      return;
-    }
-    try {
-      setPlacing(true);
-      await checkoutOrder(selectedAddress, token);
-      await clearCart();
-      alert("Order placed successfully! 🎉");
-      navigate("/orders");
-    } catch (err) {
-      console.log(err);
-      alert("Order place karne me error aaya");
-    } finally {
-      setPlacing(false);
-    }
-  };
+const handlePlaceOrder = async () => {
+  if (!selectedAddress) {
+    alert("Pehle delivery address select karo ya add karo (Profile page se)");
+    return;
+  }
+
+  try {
+    setPlacing(true);
+
+    // 1. Razorpay order create karo backend se
+    const orderRes = await createRazorpayOrder(total, token);
+    const { razorpayOrderId, razorpayKeyId, amount, currency } = orderRes.data;
+
+    // 2. Razorpay popup ki options
+    const options = {
+      key: razorpayKeyId,
+      amount: Math.round(amount * 100), // paise me
+      currency: currency,
+      name: "Craveo",
+      description: "Food Order Payment",
+      order_id: razorpayOrderId,
+      handler: async function (response) {
+        // 3. Payment success hone pe backend se verify karwao
+        try {
+          await verifyPayment(
+            {
+              razorpayOrderId: response.razorpay_order_id,
+              razorpayPaymentId: response.razorpay_payment_id,
+              razorpaySignature: response.razorpay_signature,
+              addressId: selectedAddress,
+            },
+            token
+          );
+          await clearCart();
+          alert("Payment successful! Order placed 🎉");
+          navigate("/orders");
+        } catch (err) {
+          console.log(err);
+          alert("Payment ho gaya but order place karne me error aaya. Support se contact karo.");
+        } finally {
+          setPlacing(false);
+        }
+      },
+      prefill: {
+        // chaho to user ka naam/email/phone yahan prefill kar sakte ho
+      },
+      theme: {
+        color: "#b23fe4",
+      },
+      modal: {
+        ondismiss: function () {
+          setPlacing(false); // agar user popup band kar de bina pay kiye
+        },
+      },
+    };
+
+    const rzp = new window.Razorpay(options);
+    rzp.open();
+  } catch (err) {
+    console.log(err);
+    alert("Payment start karne me error aaya");
+    setPlacing(false);
+  }
+};
 
   return (
     <div className="home-layout">
